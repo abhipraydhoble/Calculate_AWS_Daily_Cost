@@ -72,7 +72,7 @@ setup student application
 
 # yum install git -y
 # cd 
-# git clone https://github.com/shubhamborkar25/StudentProject.git
+# git clone https://github.com/abhipraydhoble/Student_App-Project.git 
 # cd apache-tomcat-8.5.93/bin
 # ./catalina.sh stop
 
