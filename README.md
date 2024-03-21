@@ -1,1 +1,143 @@
 # Student_App-Project
+
+Requirement
+Port: 8080 22 3306
+application/command : git, unzip
+
+******** this is for amazon linux OS, for ubuntu OS command may be change
+
+--------------------------------------------------------------------------------------
+
+## Tomcat server installation steps:
+
+-> lauch ec2 instance
+->alllow port 8080
+
+->login into ec2
+->java install-1.8
+    $ yum install java-1.8* -y
+->tomcat install 
+    $ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
+->unzip apache-tomcat-8.5.99.zip
+->cd  apache-tomcat-8.5.99.zip
+->cd bin
+->[catalina.sh  -->this file is neccessary to start tomcat]
+->chmod +x catalina.sh   
+ tomcat start stop command
+ ./catalina.sh stop
+ ./catalina.sh start
+ 
+->sh catalina.sh start  
+->tomcat started 
+->go to browser and public ip:8080
+
+## setup student application
+
+# yum install git -y
+# cd 
+# git clone https://github.com/abhipraydhoble/Student_App-Project.git 
+# cd apache-tomcat-8.5.93/bin
+# ./catalina.sh stop
+
+
+
+# download mysql/mariadb
+
+login via root user
+# mysql -u root 
+** create user with password having root user like access **
+mysql > CREATE USER 'admin'@'localhost' IDENTIFIED BY 'YourStrongPassword123!';
+mysql > GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+mysql > FLUSH PRIVILEGES;
+mysql > exit;
+
+**login with admin user**
+# mysql -h localhost -u admin -pYourStrongPassword123!
+
+**** create new database *****
+
+mysql > create database <DATABASENAME>;              --- <DATABASENAME> = studentapp
+****  create table under database  ****
+mysql > use <DATABASENAME>;
+mysql > CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
+	student_name VARCHAR(100) NOT NULL,
+	student_addr VARCHAR(100) NOT NULL,
+	student_age VARCHAR(3) NOT NULL,
+	student_qual VARCHAR(20) NOT NULL,
+	student_percent VARCHAR(10) NOT NULL,
+	student_year_passed VARCHAR(10) NOT NULL,
+	PRIMARY KEY (student_id)
+);
+
+
+
+------------------------------------------------------------------------------------
+download java [1.8]
+# yum install java-1.8*
+
+
+----------------------------------------------------------------------------------
+installation of tomcat
+
+- download tomcat file 
+	tomcat official site --> tomcat 8 --> zip file link copy --> on terminal download
+
+# wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.93/bin/apache-tomcat-8.5.93.zip
+
+*****   unnzip the file  *******
+
+# unzip apache-tomcat-8.5.93.zip
+# cd apache-tomcat-8.5.93
+
+for tomcat start 
+# cd bin
+
+make sh file executable (permission)
+# chmod +x *.sh
+
+
+
+------------------------------------------------------------------------------------
+
+
+*** Copy file from git directory to Tomcat ***
+
+# cp StudentProject/student.war apache-tomcat-8.5.93/webapps/
+# cp StudentProject/mysql-connector.jar apache-tomcat-8.5.93/lib/
+
+**** modify context.xml
+
+cd apache-tomcat-8.5.93/conf
+vim context.xml
+add below line at line 21
+
+    <Resource
+        name="jdbc/TestDB"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxTotal="100"
+        maxIdle="30"
+        maxWaitMillis="10000"
+        username="USERNAME"
+        password="PASSWORD"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://DB-ENDPOINT:3306/studentapp"
+    />
+
+
+------
+replace above with
+USERNAME	-- MYSQL USERNAME  EX. admin
+PASSWORD 	-- MYSQL PASSWORD  Ex. YourStrongPassword123!
+DB-ENDPOINT 	-- localhost       --- In RDS, use RDS database endpoint
+
+****   Start tomcat  *******
+# cd apache-tomcat-8.5.93/bin
+# ./catalina.sh start
+
+------------------------------------------------------------------------------
+
+google hit
+localhost:8080/student
+or 
+IP:8080/student
