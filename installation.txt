@@ -6,7 +6,24 @@ application/command : git, unzip
 
 --------------------------------------------------------------------------------------
 
-Tomcat server
+Tomcat server:
+Tomcat: 8080
+-> lauch ec2 instance
+->alllow port 8080
+
+->login into ec2
+->java install-1.8
+    $ yum install java-1.8* -y
+->tomcat install 
+    $ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
+->unzip apache-tomcat-8.5.99.zip
+->cd  apache-tomcat-8.5.99.zip
+->cd bin
+->[catalina.sh  -->this file is neccessary to start tomcat]
+->chmod +x catalina.sh   
+->sh catalina.sh start   |    sh catalina.sh stop
+->tomcat started 
+->go to browser and public ip:8080
 
 download mysql/mariadb
 
