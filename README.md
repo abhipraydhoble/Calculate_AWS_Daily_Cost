@@ -18,7 +18,7 @@ Allow Ports security group: </br>
 
 Connect to instance:
 java install-1.8  </br>
-# yum install java-1.8* -y </br>
+### yum install java-1.8* -y </br>
 
 Install Tomcat 
 Search tomcat 8 download  on browser </br>
