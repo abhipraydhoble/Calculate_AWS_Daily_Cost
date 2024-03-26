@@ -3,7 +3,7 @@
 ### GITHUB REPOSITORY LINK:
 https://github.com/abhipraydhoble/Student-App-Project.git
 
-###Prerequisite:
+### Prerequisite:
 Ec2 instance
 Java-1.8
 Tomcat
