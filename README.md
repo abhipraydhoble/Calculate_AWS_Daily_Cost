@@ -44,8 +44,8 @@ $ cd Student-App-Project </br>
 
  *** Copy file from git directory to Tomcat ***</br>
 
-# cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
-# cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
+#### cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
+#### cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
 
 ## SETUP DATABASE IN RDS:
 Go to RDS
@@ -83,7 +83,7 @@ $ cd apache-tomcat-8.5.93/conf </br>
 $ vim context.xml    </br>
 add below line [connection string] at line 21
 
-##### <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+ <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
@@ -95,9 +95,9 @@ add below line [connection string] at line 21
 3.DB-ENDPOINT 
 4.DATABASE Name
 
-Start tomcat
+Start tomcat </br>
 $ cd apache-tomcat-8.5.93/bin  </br>
 $ ./catalina.sh start or  sh catalina.sh start  </br>
 
-google hit
+google hit </br>
 IP:8080/student
