@@ -89,11 +89,11 @@ add below line [connection string] at line 21
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
 
 
-* Change 
-1.Username
-2.Password
-3.DB-ENDPOINT 
-4.DATABASE Name
+* Change  </br>
+1.Username  </br>
+2.Password   </br>
+3.DB-ENDPOINT  </br>
+4.DATABASE Name </br>
 
 Start tomcat </br>
 $ cd apache-tomcat-8.5.93/bin  </br>
