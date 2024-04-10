@@ -4,11 +4,11 @@
 https://github.com/abhipraydhoble/Student-App-Project.git
 
 ### Prerequisite:
--Ec2 instance </br>
-Java-1.8 </br>
-Tomcat </br>
-Git </br>
--RDS </br>
+- Ec2 instance </br>
+- Java-1.8 </br>
+- Tomcat </br>
+- Git </br>
+- RDS </br>
 
 ## LAUNCH EC2 INSTANCE
 Allow Ports security group: </br>
@@ -17,24 +17,24 @@ Allow Ports security group: </br>
 3306 = Mysql / Mariadb </br>
 
 Connect to instance:
--java install-1.8  </br>
+- java install-1.8  </br>
 ### yum install java-1.8* -y </br>
 
--Install Tomcat 
-Search tomcat 8 download  on browser </br>
+- Install Tomcat 
+Search tomcat 8 download  on browser </br>
 $ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
 
 $ unzip apache-tomcat-8.5.99.zip </br>
 $ cd  apache-tomcat-8.5.99.zip </br>
 $ cd bin </br>
-[catalina.sh  -->this file is neccessary to start tomcat] </br>
+[catalina.sh  -->this file is neccessary to start tomcat] </br>
 $ chmod +x catalina.sh     [ give execute permission to file] </br>
 
 ### Start and Stop Tomcat using this command: </br>
 $ sh catalina.sh start   [ tomcat started ] </br>
 $ sh catalina.sh stop </br>
 
-go to browser and public ip:8080
+go to browser and public ip:8080
 
 ## SETUP STUDENT APPLICATION </br>
 
@@ -48,8 +48,8 @@ $ cd Student-App-Project </br>
 #### cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
 
 ## SETUP DATABASE IN RDS:
-Go to RDS
-download mariadb-server using  below command
+Go to RDS
+download mariadb-server using  below command
 
 $ dnf install mariadb105-server </br>
 $ systemctl start mariadb    </br>
