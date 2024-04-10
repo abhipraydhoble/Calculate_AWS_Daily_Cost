@@ -1,14 +1,14 @@
-# Project : Student App
+# $${\color{red}Project : Student App}$$ 
 
 ### GITHUB REPOSITORY LINK:
 https://github.com/abhipraydhoble/Student-App-Project.git
 
 ### Prerequisite:
-Ec2 instance </br>
+-Ec2 instance </br>
 Java-1.8 </br>
 Tomcat </br>
 Git </br>
-RDS </br>
+-RDS </br>
 
 ## LAUNCH EC2 INSTANCE
 Allow Ports security group: </br>
@@ -17,10 +17,10 @@ Allow Ports security group: </br>
 3306 = Mysql / Mariadb </br>
 
 Connect to instance:
-java install-1.8  </br>
+-java install-1.8  </br>
 ### yum install java-1.8* -y </br>
 
-Install Tomcat 
+-Install Tomcat 
 Search tomcat 8 download  on browser </br>
 $ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
 
