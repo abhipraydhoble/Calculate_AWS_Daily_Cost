@@ -3,12 +3,12 @@
 ### $\color{yellow}{GITHUB \ REPOSITORY \ LINK:}$ 
 https://github.com/abhipraydhoble/Student-App-Project.git
 
-### Prerequisite:
-- Ec2 instance </br>
-- Java-1.8 </br>
-- Tomcat </br>
-- Git </br>
-- RDS </br>
+### $\color{green}{Prerequisite:}$
+- Ec2 instance 
+- Java-1.8 
+- Tomcat 
+- Git 
+- RDS 
 
 ## LAUNCH EC2 INSTANCE
 Allow Ports security group: </br>
@@ -17,44 +17,51 @@ Allow Ports security group: </br>
 3306 = Mysql / Mariadb </br>
 
 Connect to instance:
-- java install-1.8  </br>
-### yum install java-1.8* -y </br>
 
+- java install-1.8  
+````
+yum install java-1.8* -y </br>
+````
 - Install Tomcat 
 Search tomcat 8 download  on browser </br>
-$ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
+ ````
+wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
 
-$ unzip apache-tomcat-8.5.99.zip </br>
-$ cd  apache-tomcat-8.5.99.zip </br>
-$ cd bin </br>
-[catalina.sh  -->this file is neccessary to start tomcat] </br>
-$ chmod +x catalina.sh     [ give execute permission to file] </br>
-
+unzip apache-tomcat-8.5.99.zip </br>
+cd  apache-tomcat-8.5.99.zip </br>
+cd bin </br>
+[catalina.sh  -->this file is neccessary to start tomcat] 
+chmod +x catalina.sh     [ give execute permission to file] 
+````
 ### Start and Stop Tomcat using this command: </br>
-$ sh catalina.sh start   [ tomcat started ] </br>
-$ sh catalina.sh stop </br>
-
+````
+sh catalina.sh start   [ tomcat started ]
+sh catalina.sh stop 
+````
 go to browser and public ip:8080
 
 ## SETUP STUDENT APPLICATION </br>
-
-$ yum install git -y </br>
-$ git clone https://github.com/abhipraydhoble/Student-App-Project.git </br>
-$ cd Student-App-Project </br>
-
+````
+yum install git -y 
+git clone https://github.com/abhipraydhoble/Student-App-Project.git 
+cd Student-App-Project 
+````
  *** Copy file from git directory to Tomcat ***</br>
 
-#### cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
-#### cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
-
+````
+cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
+cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
+````
 ## SETUP DATABASE IN RDS:
 Go to RDS
 download mariadb-server using  below command
 
-$ dnf install mariadb105-server </br>
-$ systemctl start mariadb    </br>
-$ systemctl enable mariadb  </br>
-$ systemctl status mariadb  </br>
+````
+dnf install mariadb105-server
+systemctl start mariadb    
+systemctl enable mariadb  
+systemctl status mariadb
+````
 
 ### Log in into database
 
@@ -79,8 +86,10 @@ Logout from database:
 
  ## MODIFY context.xml:
 
-$ cd apache-tomcat-8.5.93/conf </br>
-$ vim context.xml    </br>
+```
+cd apache-tomcat-8.5.93/conf
+vim context.xml
+````
 add below line [connection string] at line 21
 
  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
@@ -95,9 +104,11 @@ add below line [connection string] at line 21
 3.DB-ENDPOINT  </br>
 4.DATABASE Name </br>
 
-Start tomcat </br>
-$ cd apache-tomcat-8.5.93/bin  </br>
-$ ./catalina.sh start or  sh catalina.sh start  </br>
+Start tomcat </br>
+````
+cd apache-tomcat-8.5.93/bin
+./catalina.sh start or  sh catalina.sh start
+````
 
 google hit </br>
 IP:8080/student
