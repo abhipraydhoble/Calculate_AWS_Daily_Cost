@@ -46,7 +46,7 @@ yum install git -y
 git clone https://github.com/abhipraydhoble/Student-App-Project.git 
 cd Student-App-Project 
 ````
- *** Copy file from git directory to Tomcat ***</br>
+Copy file from git directory to Tomcat 
 
 ````
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
@@ -69,18 +69,18 @@ systemctl status mariadb
 <Mariadb> Create database studentapp;    </br>
 <Mariadb> Use studentapp;   --> Switch to newly created database   </br>
 
-### Run this query to create  table: </br>
-
- CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,  </br>
-	student_name VARCHAR(100) NOT NULL,  </br>
-	student_addr VARCHAR(100) NOT NULL,   </br>
-	student_age VARCHAR(3) NOT NULL,      </br>
-	student_qual VARCHAR(20) NOT NULL,     </br>
-	student_percent VARCHAR(10) NOT NULL,   </br>
-	student_year_passed VARCHAR(10) NOT NULL,  </br>
-	PRIMARY KEY (student_id)  </br>
+### Run this query to create  table: 
+````
+ CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,  
+	student_name VARCHAR(100) NOT NULL,  
+	student_addr VARCHAR(100) NOT NULL,   
+	student_age VARCHAR(3) NOT NULL,      
+	student_qual VARCHAR(20) NOT NULL,     
+	student_percent VARCHAR(10) NOT NULL,   
+	student_year_passed VARCHAR(10) NOT NULL,  
+	PRIMARY KEY (student_id)  
 );
-
+````
 Logout from database:
 <Mariadb> exit
 
@@ -91,13 +91,13 @@ cd apache-tomcat-8.5.93/conf
 vim context.xml
 ````
 add below line [connection string] at line 21
-
+````
  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="USERNAME" password="PASSWORD" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
 
-
+````
 * Change  </br>
 1.Username  </br>
 2.Password   </br>
