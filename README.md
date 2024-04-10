@@ -10,7 +10,7 @@ https://github.com/abhipraydhoble/Student-App-Project.git
 - Git 
 - RDS 
 
-### $\color{yellow}{LAUNCH EC2 INSTANCE}$
+### $\color{yellow}{LAUNCH \ EC2 \ INSTANCE}$
 Allow Ports security group: 
 22 = SSH 
 8080 = Tomcat 
@@ -33,20 +33,20 @@ cd bin
 [catalina.sh  -->this file is neccessary to start tomcat] 
 chmod +x catalina.sh     [ give execute permission to file] 
 ````
-### $\color{yellow}{Start and Stop Tomcat using this command:}$
+### $\color{yellow}{Start \ and \ Stop \ Tomcat \ using \ this \ command:}$
 ````
 sh catalina.sh start   [ tomcat started ]
 sh catalina.sh stop 
 ````
 go to browser and public ip:8080
 
-### $\color{yellow}{SETUP STUDENT APPLICATION}$
+### $\color{yellow}{SETUP \ STUDENT \ APPLICATION}$
 ````
 yum install git -y 
 git clone https://github.com/abhipraydhoble/Student-App-Project.git 
 cd Student-App-Project 
 ````
-$\color{lightblue}{Copy file from git directory to Tomcat}$
+$\color{lightblue}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
 
 ````
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
