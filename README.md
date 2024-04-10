@@ -11,25 +11,25 @@ https://github.com/abhipraydhoble/Student-App-Project.git
 - RDS 
 
 ## LAUNCH EC2 INSTANCE
-Allow Ports security group: </br>
-22 = SSH </br>
-8080 = Tomcat </br>
-3306 = Mysql / Mariadb </br>
+Allow Ports security group: 
+22 = SSH 
+8080 = Tomcat 
+3306 = Mysql / Mariadb
 
 Connect to instance:
 
 - java install-1.8  
 ````
-yum install java-1.8* -y </br>
+yum install java-1.8* -y 
 ````
 - Install Tomcat 
-Search tomcat 8 download  on browser </br>
+Search tomcat 8 download  on browser 
  ````
 wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
 
-unzip apache-tomcat-8.5.99.zip </br>
-cd  apache-tomcat-8.5.99.zip </br>
-cd bin </br>
+unzip apache-tomcat-8.5.99.zip 
+cd  apache-tomcat-8.5.99.zip 
+cd bin 
 [catalina.sh  -->this file is neccessary to start tomcat] 
 chmod +x catalina.sh     [ give execute permission to file] 
 ````
@@ -49,8 +49,8 @@ cd Student-App-Project
 Copy file from git directory to Tomcat 
 
 ````
-cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ </br>
-cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ </br>
+cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
+cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ 
 ````
 ## SETUP DATABASE IN RDS:
 Go to RDS
@@ -65,9 +65,9 @@ systemctl status mariadb
 
 ### Log in into database
 
-<Mariadb> Create database with name studentapp  </br>
-<Mariadb> Create database studentapp;    </br>
-<Mariadb> Use studentapp;   --> Switch to newly created database   </br>
+<Mariadb> Create database with name studentapp  
+<Mariadb> Create database studentapp;    
+<Mariadb> use studentapp;   --> Switch to newly created database   
 
 ### Run this query to create  table: 
 ````
@@ -98,17 +98,17 @@ add below line [connection string] at line 21
                url="jdbc:mysql://DB-ENDPOINT:3306/DATABASE"/>
 
 ````
-* Change  </br>
-1.Username  </br>
-2.Password   </br>
-3.DB-ENDPOINT  </br>
-4.DATABASE Name </br>
+* Change  
+1.Username  
+2.Password   
+3.DB-ENDPOINT  
+4.DATABASE Name 
 
-Start tomcat </br>
+Start tomcat 
 ````
 cd apache-tomcat-8.5.93/bin
 ./catalina.sh start or  sh catalina.sh start
 ````
 
-google hit </br>
+- google hit 
 IP:8080/student
