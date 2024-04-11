@@ -16,7 +16,13 @@ Allow Ports security group:
 8080 = Tomcat 
 3306 = Mysql / Mariadb
 
+![instance](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/d7851745-1bfe-4f92-b7bb-18555f2dfd45)
+
 $\color{green}{Connect \ to \ instance:}$
+
+![connect](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/727778ca-e9ee-43c9-ab85-ff055f94d4a2)
+
+![cli](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/0e6244e1-489c-42c1-ae89-27c8b7c37792)
 
 - $\color{lightblue}{install \ java }$
 ````
