@@ -29,7 +29,10 @@ $\color{green}{Connect \ to \ instance:}$
 yum install java-1.8* -y 
 ````
 - $\color{lightblue}{Install \ Tomcat }$
-Search tomcat 8 download  on browser 
+Search tomcat 8 download  on browser
+
+![tomcat](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/8e622609-b7df-4f26-b8e3-e787e5e16c95)
+
  ````
 wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
 
