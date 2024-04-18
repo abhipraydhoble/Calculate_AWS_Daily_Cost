@@ -78,6 +78,12 @@ systemctl status mariadb
 mysql -h rds-endpoint   -u admin -pPasswd123$
 ````
 Note: replace rds-endpoint with actual endpoint value
+Important Commands:
+- show databases;
+- create database  databasename;
+- use databasename;
+- show tables;
+- describe tablename;
 <Mariadb> Create database with name studentapp  
 <Mariadb> Create database studentapp;    
 <Mariadb> use studentapp;   --> Switch to newly created database   
