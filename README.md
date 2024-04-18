@@ -72,7 +72,7 @@ systemctl enable mariadb
 systemctl status mariadb
 ````
 
-###$\color{yellow}{Log in into database}$
+### $\color{yellow}{Log in into database}$
 
 <Mariadb> Create database with name studentapp  
 <Mariadb> Create database studentapp;    
