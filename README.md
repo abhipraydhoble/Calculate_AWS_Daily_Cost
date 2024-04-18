@@ -74,6 +74,10 @@ systemctl status mariadb
 
 ### $\color{yellow}{Log \ in \ into \ database}$
 
+````
+mysql -h rds-endpoint   -u admin -pPasswd123$
+````
+
 <Mariadb> Create database with name studentapp  
 <Mariadb> Create database studentapp;    
 <Mariadb> use studentapp;   --> Switch to newly created database   
