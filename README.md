@@ -61,7 +61,7 @@ $\color{lightblue}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
 cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ 
 ````
-### $\color{yellow}{SETUP DATABASE IN RDS:}$
+### $\color{yellow}{SETUP \ DATABASE \ IN \ RDS:}$
 Go to RDS
 download mariadb-server using  below command
 
@@ -72,13 +72,13 @@ systemctl enable mariadb
 systemctl status mariadb
 ````
 
-### $\color{yellow}{Log in into database}$
+### $\color{yellow}{Log \ in \ into \ database}$
 
 <Mariadb> Create database with name studentapp  
 <Mariadb> Create database studentapp;    
 <Mariadb> use studentapp;   --> Switch to newly created database   
 
-### $\color{yellow}{Run this query to create  table:}$
+### $\color{yellow}{Run \ this \ query \ to \ create \ table:}$
 ````
  CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,  
 	student_name VARCHAR(100) NOT NULL,  
@@ -93,7 +93,7 @@ systemctl status mariadb
 Logout from database:
 <Mariadb> exit
 
- ### $\color{yellow}{ MODIFY context.xml:}$
+ ### $\color{yellow}{ MODIFY \ context.xml:}$
 
 ```
 cd apache-tomcat-8.5.93/conf
