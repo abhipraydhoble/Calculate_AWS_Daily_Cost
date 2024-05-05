@@ -1,6 +1,6 @@
 # $${\color{red}Project : Student \ App}$$ 
 
-### $\color{yellow}{GITHUB \ REPOSITORY \ LINK:}$ 
+### $\color{blue}{GITHUB \ REPOSITORY \ LINK:}$ 
 https://github.com/abhipraydhoble/Student-App-Project.git
 
 ### $\color{green}{Prerequisite:}$
@@ -10,7 +10,7 @@ https://github.com/abhipraydhoble/Student-App-Project.git
 - Git 
 - RDS 
 
-### $\color{yellow}{LAUNCH \ EC2 \ INSTANCE}$
+### $\color{blue}{LAUNCH \ EC2 \ INSTANCE}$
 Allow Ports security group: 
 22 = SSH 
 8080 = Tomcat 
@@ -42,14 +42,14 @@ cd bin
 [catalina.sh  -->this file is neccessary to start tomcat] 
 chmod +x catalina.sh     [ give execute permission to file] 
 ````
-### $\color{yellow}{Start \ and \ Stop \ Tomcat \ using \ this \ command:}$
+### $\color{blue}{Start \ and \ Stop \ Tomcat \ using \ this \ command:}$
 ````
 sh catalina.sh start   [ tomcat started ]
 sh catalina.sh stop 
 ````
 go to browser and public ip:8080
 
-### $\color{yellow}{SETUP \ STUDENT \ APPLICATION}$
+### $\color{blue}{SETUP \ STUDENT \ APPLICATION}$
 ````
 yum install git -y 
 git clone https://github.com/abhipraydhoble/Student-App-Project.git 
@@ -61,7 +61,7 @@ $\color{lightblue}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
 cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ 
 ````
-### $\color{yellow}{SETUP \ DATABASE \ IN \ RDS:}$
+### $\color{blue}{SETUP \ DATABASE \ IN \ RDS:}$
 Go to RDS
 download mariadb-server using  below command
 
@@ -72,7 +72,7 @@ systemctl enable mariadb
 systemctl status mariadb
 ````
 
-### $\color{yellow}{Log \ in \ into \ database}$
+### $\color{blue}{Log \ in \ into \ database}$
 
 ````
 mysql -h rds-endpoint   -u admin -pPasswd123$
@@ -91,7 +91,7 @@ describe tablename;
 <Mariadb> Create database studentapp;    
 <Mariadb> use studentapp;   --> Switch to newly created database   
 
-### $\color{yellow}{Run \ this \ query \ to \ create \ table:}$
+### $\color{blue}{Run \ this \ query \ to \ create \ table:}$
 ````
  CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,  
 	student_name VARCHAR(100) NOT NULL,  
@@ -106,7 +106,7 @@ describe tablename;
 Logout from database:
 <Mariadb> exit
 
- ### $\color{yellow}{ MODIFY \ context.xml:}$
+ ### $\color{blue}{ MODIFY \ context.xml:}$
 
 ```
 cd apache-tomcat-8.5.93/conf
@@ -126,7 +126,7 @@ add below line [connection string] at line 21
 3.DB-ENDPOINT  
 4.DATABASE Name 
 
-$\color{yellow}{Start \ tomcat}$
+$\color{blue}{Start \ tomcat}$
 ````
 cd apache-tomcat-8.5.93/bin
 ./catalina.sh start or  sh catalina.sh start
