@@ -98,9 +98,9 @@ add below line at line 21
 
 ------
 replace above with
-USERNAME	-- MYSQL USERNAME  EX. admin
-PASSWORD 	-- MYSQL PASSWORD  Ex. YourStrongPassword123!
-DB-ENDPOINT 	-- localhost       --- In RDS, use RDS database endpoint
+USERNAME	-- MYSQL USERNAME  EX. root
+PASSWORD 	-- MYSQL PASSWORD  Ex. 1234
+DB-ENDPOINT 	-- localhost       
 
 ****   Start tomcat  *******
 # cd apache-tomcat-8.5.93/bin
