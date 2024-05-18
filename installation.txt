@@ -6,37 +6,15 @@ application/command : git, unzip
 
 --------------------------------------------------------------------------------------
 
-Tomcat server:
-Tomcat: 8080
--> lauch ec2 instance
-->alllow port 8080
-
-->login into ec2
-->java install-1.8
-    $ yum install java-1.8* -y
-->tomcat install 
-    $ wget  https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
-->unzip apache-tomcat-8.5.99.zip
-->cd  apache-tomcat-8.5.99.zip
-->cd bin
-->[catalina.sh  -->this file is neccessary to start tomcat]
-->chmod +x catalina.sh   
-->sh catalina.sh start   |    sh catalina.sh stop
-->tomcat started 
-->go to browser and public ip:8080
-
 download mysql/mariadb
-
+#yum install mariadb-server -y
+#systemctl start mariadb 
+#systemctl enable mariadb 
+#mysql_secure_installation
+note: user name is root and set password for root user
 login via root user
-# mysql -u root 
-** create user with password having root user like access **
-mysql > CREATE USER 'admin'@'localhost' IDENTIFIED BY 'YourStrongPassword123!';
-mysql > GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
-mysql > FLUSH PRIVILEGES;
-mysql > exit;
+# mysql -u root -p1234
 
-**login with admin user**
-# mysql -h localhost -u admin -pYourStrongPassword123!
 
 **** create new database *****
 
@@ -54,10 +32,10 @@ mysql > CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREME
 );
 
 
-
+mysql > exit
 ------------------------------------------------------------------------------------
 download java [1.8]
-# yum install java-1.8*
+# yum install java-1.8* -y
 
 
 ----------------------------------------------------------------------------------
