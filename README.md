@@ -15,6 +15,12 @@ sudo apt install -y python3-pip
 pip3 --version
 ````
 ## Install AWS CLI
+````
+sudo apt install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+````
 ## Create Directory "AWS_Cost"
 ````
 mkdir AWS_Script
