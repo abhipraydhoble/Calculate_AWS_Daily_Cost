@@ -1,12 +1,12 @@
 # Calculate_AWS_Daily_Cost
-# For Centos
+## For Centos
 ````sudo yum update -y
 sudo yum install -y python3
 python3 --version
 yum install -y python3-pip
 pip3 --version
 ````
-# For Ubuntu
+## For Ubuntu
 ````sudo apt update -y
 sudo apt upgrade -y
 sudo apt install -y python3
@@ -26,7 +26,10 @@ sudo ./aws/install
 mkdir AWS_Script
 ````
 ## Give Permissions to file and directory
-# Bash_Script
+## Bash_Script
+````
+sudo vim aws_cost_daily.txt
+````
 ````
 #!/bin/bash
 
@@ -45,8 +48,15 @@ aws ce get-cost-and-usage \
     --output text
                 
 ````
-
-# Python_Script
+## Run Bash Script
+````
+chmod 600 aws_cost_daily.txt
+./aws_cost_daily.txt
+````
+## Python_Script
+````
+sudo vim aws_daily_cost.py
+````
 ````
 import boto3
 import datetime
@@ -80,4 +90,8 @@ if __name__ == "__main__":
     daily_cost = get_aws_daily_cost()
     print(f"Daily AWS Account Cost: ${daily_cost}")
     save_cost_to_file(daily_cost)
+````
+## Run Python Script
+````
+python3 aws_daily_cost.py
 ````
