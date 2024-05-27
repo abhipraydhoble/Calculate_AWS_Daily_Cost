@@ -66,7 +66,7 @@ Go to RDS
 download mariadb-server using  below command
 
 ````
-dnf install mariadb105-server
+yum install mariadb105-server -y
 systemctl start mariadb    
 systemctl enable mariadb  
 systemctl status mariadb
