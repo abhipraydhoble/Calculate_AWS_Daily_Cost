@@ -56,8 +56,8 @@ aws ce get-cost-and-usage \
 ````
 ## Run Bash Script
 ````
-chmod 600 aws_cost_daily.txt
-./aws_cost_daily.txt
+chmod +x aws_cost_daily.sh
+./aws_cost_daily.sh
 ````
 ## Python_Script
 ````
