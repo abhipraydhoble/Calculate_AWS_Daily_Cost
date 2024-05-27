@@ -28,7 +28,7 @@ mkdir AWS_Script
 ## Give Permissions to file and directory
 ## Bash_Script
 ````
-sudo vim aws_cost_daily.txt
+sudo vim aws_cost_daily.sh
 ````
 ````
 #!/bin/bash
