@@ -1,7 +1,5 @@
-# $${\color{red}Project : Student \ \textbf App}$$ 
+# $${\color{red} \textbf{Project}: \textbf{Student}  \ \textbf{App}}$$
 
-### $\color{blue}{GITHUB \ \ \textbf  REPOSITORY \ LINK:}$ 
-https://github.com/abhipraydhoble/Student-App-Project.git
 
 ### $\color{green}{Prerequisite:}$
 - Ec2 instance 
