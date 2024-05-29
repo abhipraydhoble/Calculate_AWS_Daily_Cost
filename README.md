@@ -1,14 +1,14 @@
 # $${\color{red} \textbf{Project}: \textbf{Student}  \ \textbf{App}}$$
 
 
-### $\color{green}{Prerequisite:}$
+### $\color{green} \textbf{Prerequisite:}}$    
 - Ec2 instance 
 - Java-1.8 
 - Tomcat 
 - Git 
 - RDS 
 
-### $\color{blue}{LAUNCH \ EC2 \ INSTANCE}$
+### $${\color{blue} \textbf{Launch} \textbf{EC2}  \ \textbf{Instance}}$$
 Allow Ports security group: 
 22 = SSH 
 8080 = Tomcat 
@@ -40,7 +40,7 @@ cd bin
 [catalina.sh  -->this file is neccessary to start tomcat] 
 chmod +x catalina.sh     [ give execute permission to file] 
 ````
-### $\color{blue}{Start \ and \ Stop \ Tomcat \ using \ this \ command:}$
+### ${\color{blue} \textbf{Start} \textbf{Stop}  \ \textbf{Tomcat}}$
 ````
 sh catalina.sh start   [ tomcat started ]
 sh catalina.sh stop 
