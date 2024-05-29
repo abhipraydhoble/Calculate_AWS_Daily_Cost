@@ -1,7 +1,7 @@
 # $${\color{red} \textbf{Project}: \textbf{Student}  \ \textbf{App}}$$
 
 
-### $\color{{green} \textbf{Prerequisite:}}$    
+### $\color{{green} \ \textbf{Prerequisite:}}$    
 - Ec2 instance 
 - Java-1.8 
 - Tomcat 
@@ -16,17 +16,17 @@ Allow Ports security group:
 
 ![instance](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/d7851745-1bfe-4f92-b7bb-18555f2dfd45)
 
-$\color{green}{Connect \ to \ instance:}$
+$\color{red}{Connect \ to \ instance:}$
 
 ![connect](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/727778ca-e9ee-43c9-ab85-ff055f94d4a2)
 
 ![cli](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/0e6244e1-489c-42c1-ae89-27c8b7c37792)
 
-- $\color{lightblue}{install \ java }$
+- $\color{red}{install \ java }$
 ````
 yum install java-1.8* -y 
 ````
-- $\color{lightblue}{Install \ Tomcat }$
+- $\color{red}{Install \ Tomcat }$
 Search tomcat 8 download  on browser
 
 ![tomcat](https://github.com/abhipraydhoble/Project-Student-App/assets/122669982/8e622609-b7df-4f26-b8e3-e787e5e16c95)
@@ -53,7 +53,7 @@ yum install git -y
 git clone https://github.com/abhipraydhoble/Student-App-Project.git 
 cd Student-App-Project 
 ````
-$\color{lightblue}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
+$\color{red}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
 
 ````
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
