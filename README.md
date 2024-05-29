@@ -101,7 +101,7 @@ Logout from database:
  exit
 ```
 
- ### ${{\color{blue} \textbf{Modify} \ \textbf{Context.xml  \ \textbf{in} \ \textbf{apche-tomcat\conf}}$
+## Modify apache-tomcat/conf/context.xml file
 
 ```
 cd apache-tomcat-8.5.93/conf
