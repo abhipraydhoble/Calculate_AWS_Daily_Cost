@@ -1,14 +1,14 @@
 # $${\color{red} \textbf{Project}: \textbf{Student}  \ \textbf{App}}$$
 
 
-### $\color{green} \textbf{Prerequisite:}}$    
+### $\color{{green} \textbf{Prerequisite:}}$    
 - Ec2 instance 
 - Java-1.8 
 - Tomcat 
 - Git 
 - RDS 
 
-### $${\color{blue} \textbf{Launch} \textbf{EC2}  \ \textbf{Instance}}$$
+### ${\color{blue} \textbf{Launch} \textbf{EC2}  \ \textbf{Instance}}$
 Allow Ports security group: 
 22 = SSH 
 8080 = Tomcat 
@@ -47,7 +47,7 @@ sh catalina.sh stop
 ````
 go to browser and public ip:8080
 
-### $\color{blue}{SETUP \ STUDENT \ APPLICATION}$
+### ${\color{blue} \textbf{SetUp} \textbf{Student}  \ \textbf{Applicationt}}$
 ````
 yum install git -y 
 git clone https://github.com/abhipraydhoble/Student-App-Project.git 
@@ -59,7 +59,7 @@ $\color{lightblue}{Copy \ file \ from \ git \ directory \ to \ Tomcat}$
 cp Student-App-Project/student.war apache-tomcat-8.5.93/webapps/ 
 cp Student-App-Project/mysql-connector.jar apache-tomcat-8.5.93/lib/ 
 ````
-### $\color{blue}{SETUP \ DATABASE \ IN \ RDS:}$
+### ${\color{blue} \textbf{Create} \textbf{Database}  \ \textbf{in} \ \textbf{RDS}}$
 Go to RDS
 download mariadb-server using  below command
 
@@ -70,27 +70,22 @@ systemctl enable mariadb
 systemctl status mariadb
 ````
 
-### $\color{blue}{Log \ in \ into \ database}$
+### ${\color{blue} \textbf{Log} \textbf{Into}  \ \textbf{Database}}$
 
 ````
-mysql -h rds-endpoint   -u admin -pPasswd123$
+mysql -h "database-1.cxqukacgq5pj.us-east-1.rds.amazonaws.com"   -u admin -pPasswd123$
 ````
 Note: replace rds-endpoint with actual endpoint value
-Important Commands:
-````
+
+```sql
 show databases;
-create database  databasename;
-use databasename;
-show tables;
-describe tablename;
+create database  studentapp;
+use studentapp;
+```
+ 
+#### ${\color{blue} \textbf{Create} \textbf{Table}  \ \textbf{in} \ \textbf{DB}}$
 
-  ````
-<Mariadb> Create database with name studentapp  
-<Mariadb> Create database studentapp;    
-<Mariadb> use studentapp;   --> Switch to newly created database   
-
-### $\color{blue}{Run \ this \ query \ to \ create \ table:}$
-````
+```sql
  CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,  
 	student_name VARCHAR(100) NOT NULL,  
 	student_addr VARCHAR(100) NOT NULL,   
@@ -100,11 +95,13 @@ describe tablename;
 	student_year_passed VARCHAR(10) NOT NULL,  
 	PRIMARY KEY (student_id)  
 );
-````
+```
 Logout from database:
-<Mariadb> exit
+```sql
+ exit
+```
 
- ### $\color{blue}{ MODIFY \ context.xml:}$
+ ### ${\color{blue} \textbf{Modify} \textbf{Context.xml  \ \textbf{in} \ \textbf{/apche-tomcat/conf}}$
 
 ```
 cd apache-tomcat-8.5.93/conf
